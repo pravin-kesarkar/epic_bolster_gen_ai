@@ -1,3 +1,7 @@
+# main function
+
+
+
 import boto3
 import time
 import json
@@ -7,8 +11,6 @@ from botocore.client import Config
 session = boto3.session.Session(region_name='us-west-2')
 s3 = session.client('s3', config=boto3.session.Config(signature_version='s3v4'))
 lambda_client = boto3.client('lambda')
-#pre-signed 
-# s3 = boto3.client('s3', config=Config(signature_version='s3v4'))
 sm_runtime = boto3.client('sagemaker-runtime')
 
 transcribe_client = boto3.client('transcribe')

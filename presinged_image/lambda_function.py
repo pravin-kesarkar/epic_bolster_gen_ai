@@ -1,9 +1,8 @@
+# create presigned url
 import json
 import boto3
 import urllib
 
-
-# from moviepy.editor import VideoFileClip
 session = boto3.session.Session(region_name='us-west-2')
 s3 = session.client('s3', config=boto3.session.Config(signature_version='s3v4'))
 
